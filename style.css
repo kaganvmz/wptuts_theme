@@ -469,35 +469,35 @@ margin-bottom: 40px;
   border-bottom: medium none;
 }
 
-.category-detail > ul {
+.widget_categories > ul {
   margin: 0 auto 30px;
   padding: 0;
 }
 
-.category-detail li {
+.widget_categories li {
   border-bottom: 1px dashed hsl(0, 0%, 80%);
   list-style: outside none none;
   margin: 0 20px 0 20px;
   padding: 10px 0;
 }
 
-.category-detail span {
+.widget_categories span {
   float: right;
 }
 
-.category-detail i {
+.widget_categories i {
   padding-right: 5px;
 }
 
-.category-detail li:last-child {
+.widget_categories li:last-child {
   border-bottom: medium none;
 }
-.category-detail li a {
+.widget_categories li a {
   color: hsl(0, 0%, 0%);
   font-size: 15px;
 }
 
-.category-detail li a:hover {
+.widget_categories li a:hover {
  color:#ffa200;
 }
 

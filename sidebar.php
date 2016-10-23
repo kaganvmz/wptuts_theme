@@ -1,6 +1,8 @@
 	<aside class="col-md-4">
+			<?php if( is_active_sidebar('sidebar-1') ): ?>
 					<div class="side_blog_bg">
-						
+					<?php dynamic_sidebar('sidebar-1'); ?>
+						<!-- 
 						<div class="news_sletter">
 							<div class="side_bar_sub_heading">
 								<h6> Newsletter </h6>							
@@ -96,7 +98,7 @@
 							</div>
 							
 						</div>
-					
+					 -->
 						
 						<div class="sidebar_wrap">
 							<div class="side_bar_heading">
@@ -121,7 +123,7 @@
 						</div>
 						
 						
-						<div class="sidebar_wrap">
+						<!-- <div class="sidebar_wrap">
 							<div class="side_bar_heading">
 								<h6> Explore tags </h6>							
 							</div>
@@ -144,9 +146,10 @@
 							</div>
 							
 							
-						</div>
+						</div> -->
 						
 						
 					
 					</div>
+				<?php endif; ?>
 				</aside>
