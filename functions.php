@@ -494,3 +494,14 @@ class Walker_Categories_Wptuts extends Walker_Category {
 		parent::end_el( $output, $page, $depth, $args );
 	}
 }
+
+function wptuts_tag_cloud($args) {
+
+	$args['format'] = 'list';
+	$args['smallest'] = '14';
+	$args['unit'] = 'px';
+
+	return $args;
+}
+
+add_filter('widget_tag_cloud_args', 'wptuts_tag_cloud');

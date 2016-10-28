@@ -99,57 +99,6 @@
 							
 						</div>
 					 -->
-						
-						<div class="sidebar_wrap">
-							<div class="side_bar_heading">
-								<h6> Categories </h6>							
-							</div>
-							
-							<div class="category-detail">
-								 <ul>	
-								 	<li> <a href="#"> <i class="fa fa-folder-open-o" aria-hidden="true"></i> Company news <span> 25 </span></a> </li>
-									<li> <a href="#"> <i class="fa fa-folder-open-o" aria-hidden="true"></i>Updates <span> 15 </span> </a> </li>
-									<li> <a href="#"> <i class="fa fa-folder-open-o" aria-hidden="true"></i>  Fresh releases <span> 35 </span> </a> </li>
-									<li> <a href="#"> <i class="fa fa-folder-open-o" aria-hidden="true"></i> Actions & offers <span> 10 </span> </a> </li>
-									<li> <a href="#"> <i class="fa fa-folder-open-o" aria-hidden="true"></i> Travel <span> 18 </span> </a> </li>
-									<li> <a href="#"> <i class="fa fa-folder-open-o" aria-hidden="true"></i> Music <span> 16 </span> </a> </li>
-									<li> <a href="#"> <i class="fa fa-folder-open-o" aria-hidden="true"></i> Food & Drink <span> 25 </span> </a> </li>
-								 </ul>
-								
-								
-							</div>
-							
-							
-						</div>
-						
-						
-						<!-- <div class="sidebar_wrap">
-							<div class="side_bar_heading">
-								<h6> Explore tags </h6>							
-							</div>
-							
-							<div class="tag-detail">
-								 <ul>	
-								 	<li> <a href="#">  Company news </a> </li>
-									<li> <a href="#">   Fresh releases  </a> </li>
-									<li> <a href="#"> Updates  </a> </li>
-									<li> <a href="#">  Music  </a> </li>
-									<li> <a href="#">  Travel  </a> </li>
-									<li> <a href="#">  Company news </a> </li>
-									<li> <a href="#">   Fresh releases  </a> </li>
-									<li> <a href="#"> Updates  </a> </li>
-									<li> <a href="#">  Music  </a> </li>
-									<li> <a href="#">  Travel  </a> </li>
-								 </ul>
-								
-								
-							</div>
-							
-							
-						</div> -->
-						
-						
-					
 					</div>
 				<?php endif; ?>
 				</aside>
