@@ -1,4 +1,11 @@
 <?php
+require get_template_directory() . '/inc/class-wptuts-recent-post-widget.php';
+
+function wptuts_register_widget() {
+	register_widget( 'Wptuts_Widget_Recent_Posts' );
+}
+
+add_action( 'widgets_init', 'wptuts_register_widget' );
 
 function wptuts_setup() {
 
@@ -14,6 +21,8 @@ function wptuts_setup() {
 
 	add_theme_support('post-thumbnails');
 	set_post_thumbnail_size(730,446);
+
+	add_image_size( 'wptuts-recent-post', 80, 80, true );
 
 	add_theme_support('html5', array(
 		'search_form', 
