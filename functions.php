@@ -1,8 +1,10 @@
 <?php
 require get_template_directory() . '/inc/class-wptuts-recent-post-widget.php';
+require get_template_directory() . '/inc/class-wptuts-subscribe-form-widget.php';
 
 function wptuts_register_widget() {
 	register_widget( 'Wptuts_Widget_Recent_Posts' );
+	register_widget( 'Wptuts_Widget_Subscribe' );
 }
 
 add_action( 'widgets_init', 'wptuts_register_widget' );

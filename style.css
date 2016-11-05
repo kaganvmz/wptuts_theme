@@ -543,8 +543,12 @@ article.blog_post {
   padding: 25px 0;
 }
 
-
-
+.widget_subscribe .side_bar_heading h6 {
+  color: #fff;
+}
+.widget_subscribe .side_bar_heading h6::after {
+  color: rgba(255, 255, 255, 0.5);
+}
 
 
 /*---------coming soon--------*/
