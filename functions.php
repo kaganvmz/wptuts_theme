@@ -70,7 +70,7 @@ add_filter('excerpt_more', function($more) {
 function wptuts_the_breadcrumb(){
 	global $post;
 	if(!is_home()){ 
-	   echo '<li><a href="'.site_url().'"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li> <li> / </li> ';
+	   echo '<li><a href="'.site_url().'"><i class="fa fa-home" aria-hidden="true"></i>'. esc_html__('Home', 'wptuts'). '</a></li> <li> / </li> ';
 		if(is_single()){ // posts
 		the_category(', ');
 		echo " <li> / </li> ";
@@ -103,7 +103,7 @@ function wptuts_the_breadcrumb(){
 			single_cat_title();
 		}
 		elseif (is_search()) { // search pages
-			echo 'Search results "' . get_search_query() . '"';
+			echo esc_html__('Search results "', 'wptuts') . get_search_query() . '"';
 		}
 		elseif (is_tag()) { // tags
 			echo single_tag_title('', false);
@@ -125,7 +125,7 @@ function wptuts_the_breadcrumb(){
 			$userdata = get_userdata($author);
 			echo '<li>Posted ' . $userdata->display_name . '</li>';
 		} elseif (is_404()) { // if page not found
-			echo '<li>Error 404</li>';
+			echo '<li>'. esc_html__('Error 404', 'wptuts'). '</li>';
 		}
 	 
 		if (get_query_var('paged')) // number of page
@@ -134,9 +134,9 @@ function wptuts_the_breadcrumb(){
 	} else { // home
 	   $pageNum=(get_query_var('paged')) ? get_query_var('paged') : 1;
 	   if($pageNum>1)
-	      echo '<li><a href="'.site_url().'"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li> <li> / </li> <li>'.$pageNum.'- page</li>'; //fix close <i> and add <li>-page</li>
+	      echo '<li><a href="'.site_url().'"><i class="fa fa-home" aria-hidden="true"></i>'. esc_html__('Home', 'wptuts'). '</a></li> <li> / </li> <li>'.$pageNum.'- page</li>'; //fix close <i> and add <li>-page</li>
 	   else
-	      echo '<li><i class="fa fa-home" aria-hidden="true"></i>Home</li>';
+	      echo '<li><i class="fa fa-home" aria-hidden="true"></i>'. esc_html__('Home', 'wptuts'). '</li>';
 	}
 }
 /**
@@ -147,8 +147,8 @@ function wptuts_pagination( $args = array() ) {
     $defaults = array(
         'range'           => 4,
         'custom_query'    => FALSE,
-        'previous_string' => __( 'Previous', 'text-domain' ),
-        'next_string'     => __( 'Next', 'text-domain' ),
+        'previous_string' => esc_html__( 'Previous', 'wptuts' ),
+        'next_string'     => esc_html__( 'Next', 'wptuts' ),
         'before_output'   => '<div class="next_page"><ul class="page-numbers">',
         'after_output'    => '</ul></div>'
     );
@@ -192,7 +192,7 @@ function wptuts_pagination( $args = array() ) {
     $previous = esc_attr( get_pagenum_link($previous) );
     
     if ( $previous && (1 != $page) )
-        $echo .= '<li><a href="' . $previous . '" class="page-numbers" title="' . __( 'previous', 'text-domain') . '">' . $args['previous_string'] . '</a></li>';
+        $echo .= '<li><a href="' . $previous . '" class="page-numbers" title="' . esc_html__( 'previous', 'wptuts') . '">' . $args['previous_string'] . '</a></li>';
     
     if ( !empty($min) && !empty($max) ) {
         for( $i = $min; $i <= $max; $i++ ) {
@@ -207,7 +207,7 @@ function wptuts_pagination( $args = array() ) {
     $next = intval($page) + 1;
     $next = esc_attr( get_pagenum_link($next) );
     if ($next && ($count != $page) )
-        $echo .= '<li><a href="' . $next . '" class="page-numbers" title="' . __( 'next', 'text-domain') . '">' . $args['next_string'] . '</a></li>';
+        $echo .= '<li><a href="' . $next . '" class="page-numbers" title="' . esc_html__( 'next', 'wptuts') . '">' . $args['next_string'] . '</a></li>';
 
     if ( isset($echo) )
         echo $args['before_output'] . $echo . $args['after_output'];
@@ -216,41 +216,41 @@ function wptuts_pagination( $args = array() ) {
 function wptuts_customize_register( $wp_customize ) {
    
    $wp_customize->add_setting( 'header_social' , array(
-    'default'     => __('Share Your Favorite Mobile Apps With Your Friends', 'wptuts'),
+    'default'     => esc_html__('Share Your Favorite Mobile Apps With Your Friends', 'wptuts'),
     'transport'   => 'refresh',
 	));
    $wp_customize->add_setting( 'facebook_social' , array(
-    'default'     => __('Url facebook', 'wptuts'),
+    'default'     => esc_html__('Url facebook', 'wptuts'),
     'transport'   => 'refresh',
 	));
     $wp_customize->add_setting( 'twitter_social' , array(
-    'default'     => __('Url twitter', 'wptuts'),
+    'default'     => esc_html__('Url twitter', 'wptuts'),
     'transport'   => 'refresh',
 	));
 	$wp_customize->add_setting( 'linkedin_social' , array(
-    'default'     => __('Url linkedin', 'wptuts'),
+    'default'     => esc_html__('Url linkedin', 'wptuts'),
     'transport'   => 'refresh',
 	));
 
 	$wp_customize->add_setting( 'footer_copy' , array(
-    'default'     => __('Copyright text', 'wptuts'),
+    'default'     => esc_html__('Copyright text', 'wptuts'),
     'transport'   => 'refresh',
 	));
 
    	$wp_customize->add_section( 'social_section' , array(
-    'title'      => __( 'Social settings', 'wptuts' ),
+    'title'      => esc_html__( 'Social settings', 'wptuts' ),
     'priority'   => 30,
 	));
 
 	$wp_customize->add_section( 'footer_setting' , array(
-    'title'      => __( 'Footer settings', 'wptuts' ),
+    'title'      => esc_html__( 'Footer settings', 'wptuts' ),
     'priority'   => 31,
 	));
 
    $wp_customize->add_control(
 	'header_social', 
 	array(
-		'label'    => __( 'Social header in footer', 'wptuts' ),
+		'label'    => esc_html__( 'Social header in footer', 'wptuts' ),
 		'section'  => 'social_section',
 		'settings' => 'header_social',
 		'type'     => 'text',
@@ -259,7 +259,7 @@ function wptuts_customize_register( $wp_customize ) {
    $wp_customize->add_control(
 	'facebook_social', 
 	array(
-		'label'    => __( 'Facebook profile url', 'wptuts' ),
+		'label'    => esc_html__( 'Facebook profile url', 'wptuts' ),
 		'section'  => 'social_section',
 		'settings' => 'facebook_social',
 		'type'     => 'text',
@@ -268,7 +268,7 @@ function wptuts_customize_register( $wp_customize ) {
    $wp_customize->add_control(
 	'linkedin_social', 
 	array(
-		'label'    => __( 'Linkedin profile url', 'wptuts' ),
+		'label'    => esc_html__( 'Linkedin profile url', 'wptuts' ),
 		'section'  => 'social_section',
 		'settings' => 'linkedin_social',
 		'type'     => 'text',
@@ -277,7 +277,7 @@ function wptuts_customize_register( $wp_customize ) {
    $wp_customize->add_control(
 	'twitter_social', 
 	array(
-		'label'    => __( 'Twitter profile url', 'wptuts' ),
+		'label'    => esc_html__( 'Twitter profile url', 'wptuts' ),
 		'section'  => 'social_section',
 		'settings' => 'twitter_social',
 		'type'     => 'text',
@@ -286,7 +286,7 @@ function wptuts_customize_register( $wp_customize ) {
     $wp_customize->add_control(
 	'footer_copy', 
 	array(
-		'label'    => __( 'Footer settings', 'wptuts' ),
+		'label'    => esc_html__( 'Footer settings', 'wptuts' ),
 		'section'  => 'footer_setting',
 		'settings' => 'footer_copy',
 		'type'     => 'textarea',
@@ -299,9 +299,9 @@ add_action( 'customize_register', 'wptuts_customize_register' );
  */
 function wptuts_widgets_init() {
     register_sidebar( array(
-        'name'          => __( 'Main Sidebar', 'wptuts' ),
+        'name'          => esc_html__( 'Main Sidebar', 'wptuts' ),
         'id'            => 'sidebar-1',
-        'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'wptuts' ),
+        'description'   => esc_html__( 'Widgets in this area will be shown on all posts and pages.', 'wptuts' ),
         'before_widget' => '<div id="%1$s" class="sidebar_wrap %2$s">',
         'after_widget'  => '</div>',
         'before_title'  => '<div class="side_bar_heading"><h6>',

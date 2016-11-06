@@ -37,7 +37,7 @@
 						<nav role="navigation" class="navbar navbar-default">
 							<div class="navbar-header">
                                 <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
-                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="sr-only"><?php esc_html_e('Toggle navigation', 'wptuts'); ?></span>
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>

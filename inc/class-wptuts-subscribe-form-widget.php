@@ -25,11 +25,11 @@ class Wptuts_Widget_Subscribe extends WP_Widget {
 	public function __construct() {
 		$widget_ops = array(
 			'classname' => 'widget_subscribe news_sletter',
-			'description' => __( 'Subscribe form.' ),
+			'description' => esc_html__( 'Subscribe form.', 'wptuts' ),
 			'customize_selective_refresh' => true,
 		);
 		$control_ops = array( 'width' => 400, 'height' => 350 );
-		parent::__construct( 'subscribe', __( 'Subscribe form' ), $widget_ops, $control_ops );
+		parent::__construct( 'subscribe', esc_html__( 'Subscribe form', 'wptuts' ), $widget_ops, $control_ops );
 	}
 
 	/**
@@ -70,11 +70,11 @@ class Wptuts_Widget_Subscribe extends WP_Widget {
 				
 			<form>
 				<div class="form-group blog_form">
-					<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email Address">
+					<input type="email" class="form-control" id="exampleInputEmail1" placeholder="<?php esc_html_e('Email Address', 'wptuts'); ?>">
 				</div>
 								  
 				<div class="search_btn-3">
-					<button class="btn btn-default" type="submit">  Subscribe </button>	
+					<button class="btn btn-default" type="submit"><?php esc_html_e('Subscribe', 'wptuts'); ?>  </button>	
 				</div>
 			</form>
 		<?php
@@ -117,13 +117,13 @@ class Wptuts_Widget_Subscribe extends WP_Widget {
 		$filter = isset( $instance['filter'] ) ? $instance['filter'] : 0;
 		$title = sanitize_text_field( $instance['title'] );
 		?>
-		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:'); ?></label>
+		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php esc_html_e('Title:', 'wptuts'); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></p>
 
-		<p><label for="<?php echo $this->get_field_id( 'text' ); ?>"><?php _e( 'Content:' ); ?></label>
+		<p><label for="<?php echo $this->get_field_id( 'text' ); ?>"><?php esc_html_e( 'Content:', 'wptuts' ); ?></label>
 		<textarea class="widefat" rows="16" cols="20" id="<?php echo $this->get_field_id('text'); ?>" name="<?php echo $this->get_field_name('text'); ?>"><?php echo esc_textarea( $instance['text'] ); ?></textarea></p>
 
-		<p><input id="<?php echo $this->get_field_id('filter'); ?>" name="<?php echo $this->get_field_name('filter'); ?>" type="checkbox"<?php checked( $filter ); ?> />&nbsp;<label for="<?php echo $this->get_field_id('filter'); ?>"><?php _e('Automatically add paragraphs'); ?></label></p>
+		<p><input id="<?php echo $this->get_field_id('filter'); ?>" name="<?php echo $this->get_field_name('filter'); ?>" type="checkbox"<?php checked( $filter ); ?> />&nbsp;<label for="<?php echo $this->get_field_id('filter'); ?>"><?php esc_html_e('Automatically add paragraphs', 'wptuts'); ?></label></p>
 		<?php
 	}
 }

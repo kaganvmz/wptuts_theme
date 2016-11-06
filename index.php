@@ -32,7 +32,7 @@
 						
 						 <?php the_excerpt(); ?>
 					
-						<a href="<?php the_permalink(); ?>"> Continue reading <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+						<a href="<?php the_permalink(); ?>"> <?php esc_html_e('Continue reading', 'wptuts')?> <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
 						
 					
 				</article>
