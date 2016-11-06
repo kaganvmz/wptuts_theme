@@ -1,0 +1,188 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: wptuts\n"
+"POT-Creation-Date: 2016-11-06 13:13+0300\n"
+"PO-Revision-Date: 2016-11-06 13:13+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: functions.php:73 functions.php:137 functions.php:139
+msgid "Home"
+msgstr ""
+
+#: functions.php:106
+msgid "Search results \""
+msgstr ""
+
+#: functions.php:128
+msgid "Error 404"
+msgstr ""
+
+#: functions.php:150
+msgid "Previous"
+msgstr ""
+
+#: functions.php:151
+msgid "Next"
+msgstr ""
+
+#: functions.php:195
+msgid "previous"
+msgstr ""
+
+#: functions.php:210
+msgid "next"
+msgstr ""
+
+#: functions.php:219
+msgid "Share Your Favorite Mobile Apps With Your Friends"
+msgstr ""
+
+#: functions.php:223
+msgid "Url facebook"
+msgstr ""
+
+#: functions.php:227
+msgid "Url twitter"
+msgstr ""
+
+#: functions.php:231
+msgid "Url linkedin"
+msgstr ""
+
+#: functions.php:236
+msgid "Copyright text"
+msgstr ""
+
+#: functions.php:241
+msgid "Social settings"
+msgstr ""
+
+#: functions.php:246 functions.php:289
+msgid "Footer settings"
+msgstr ""
+
+#: functions.php:253
+msgid "Social header in footer"
+msgstr ""
+
+#: functions.php:262
+msgid "Facebook profile url"
+msgstr ""
+
+#: functions.php:271
+msgid "Linkedin profile url"
+msgstr ""
+
+#: functions.php:280
+msgid "Twitter profile url"
+msgstr ""
+
+#: functions.php:302
+msgid "Main Sidebar"
+msgstr ""
+
+#: functions.php:304
+msgid "Widgets in this area will be shown on all posts and pages."
+msgstr ""
+
+#: functions.php:415
+#, php-format
+msgid "Feed for all posts filed under %s"
+msgstr ""
+
+#: header.php:40
+msgid "Toggle navigation"
+msgstr ""
+
+#: inc/class-wptuts-recent-post-widget.php:28
+msgid "Your site&#8217;s most recent Posts."
+msgstr ""
+
+#: inc/class-wptuts-recent-post-widget.php:31
+msgid "Wptuts Recent Posts"
+msgstr ""
+
+#: inc/class-wptuts-recent-post-widget.php:50
+msgid "Recent Posts"
+msgstr ""
+
+#: inc/class-wptuts-recent-post-widget.php:155
+#: inc/class-wptuts-subscribe-form-widget.php:120
+msgid "Title:"
+msgstr ""
+
+#: inc/class-wptuts-recent-post-widget.php:158
+msgid "Number of posts to show:"
+msgstr ""
+
+#: inc/class-wptuts-recent-post-widget.php:162
+msgid "Display post date?"
+msgstr ""
+
+#: inc/class-wptuts-subscribe-form-widget.php:28
+msgid "Subscribe form."
+msgstr ""
+
+#: inc/class-wptuts-subscribe-form-widget.php:32
+msgid "Subscribe form"
+msgstr ""
+
+#: inc/class-wptuts-subscribe-form-widget.php:73
+msgid "Email Address"
+msgstr ""
+
+#: inc/class-wptuts-subscribe-form-widget.php:77
+msgid "Subscribe"
+msgstr ""
+
+#: inc/class-wptuts-subscribe-form-widget.php:123
+msgid "Content:"
+msgstr ""
+
+#: inc/class-wptuts-subscribe-form-widget.php:126
+msgid "Automatically add paragraphs"
+msgstr ""
+
+#: index.php:23
+msgid "Post By :"
+msgstr ""
+
+#: index.php:25
+msgid "On :"
+msgstr ""
+
+#: index.php:35
+msgid "Continue reading"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "wptuts"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "webupblog.ru"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Стартовая тема для wordpress"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Шевченко Вячеслав"
+msgstr ""

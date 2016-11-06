@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 <?php get_template_part('template-parts/breadcrumbs'); ?>
+
 <section class="post_blog_bg primary-bg">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-			
         	<div class="col-md-8">
         	<?php if ( have_posts() ) : ?>
 				<?php while ( have_posts() ) : the_post(); ?>
@@ -20,9 +20,9 @@
 						<div class="blog_text">
 							<ul>
 								<li> | </li>
-								<li> Post By : <?php the_author_posts_link(); ?></li>
+								<li> <?php esc_html_e('Post By :', 'wptuts'); ?> <?php the_author_posts_link(); ?></li>
 								<li> | </li>
-								<li>  On : <?php the_time('j F Y');?> </li>
+								<li>  <?php esc_html_e('On :', 'wptuts'); ?> <?php the_time('j F Y');?> </li>
 							</ul>
 						</div>
 						
@@ -33,8 +33,7 @@
 						 <?php the_excerpt(); ?>
 					
 						<a href="<?php the_permalink(); ?>"> <?php esc_html_e('Continue reading', 'wptuts')?> <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-						
-					
+
 				</article>
 				<!-- do stuff ... -->
 				<?php endwhile; ?>

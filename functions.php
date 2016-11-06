@@ -11,7 +11,7 @@ add_action( 'widgets_init', 'wptuts_register_widget' );
 
 function wptuts_setup() {
 
-	load_theme_textdomain('wptuts');
+	load_theme_textdomain('wptuts', get_template_directory() . '/lang');
 
 	add_theme_support('title-tag');
 
@@ -70,7 +70,7 @@ add_filter('excerpt_more', function($more) {
 function wptuts_the_breadcrumb(){
 	global $post;
 	if(!is_home()){ 
-	   echo '<li><a href="'.site_url().'"><i class="fa fa-home" aria-hidden="true"></i>'. esc_html__('Home', 'wptuts'). '</a></li> <li> / </li> ';
+	   echo '<li><a href="'.site_url().'"><i class="fa fa-home" aria-hidden="true"></i>'. esc_html__('Home', 'wptuts'). '</a></li> <li> / </li>';
 		if(is_single()){ // posts
 		the_category(', ');
 		echo " <li> / </li> ";
