@@ -8,8 +8,11 @@
         	<?php if ( have_posts() ) : ?>
 				<?php while ( have_posts() ) : the_post(); 
 
-				get_template_part('template-parts/content', get_post_format());
+				get_template_part('template-parts/content', 'page');
 
+				if ( comments_open() || get_comments_number() ) {
+					comments_template();
+				}
 			endwhile; ?>
 			<?php endif; ?>
 				<?php wptuts_pagination(); ?>	
