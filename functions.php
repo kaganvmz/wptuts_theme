@@ -516,3 +516,18 @@ function wptuts_tag_cloud($args) {
 }
 
 add_filter('widget_tag_cloud_args', 'wptuts_tag_cloud');
+
+// Change order comment fields
+    add_filter('comment_form_fields', 'wptuts_reorder_comment_fields' );
+    function wptuts_reorder_comment_fields( $fields ){
+        $new_fields = array(); 
+        $myorder = array('author','email','comment');
+        foreach( $myorder as $key ){
+            $new_fields[ $key ] = $fields[ $key ];
+            unset( $fields[ $key ] );
+        }
+        if( $fields )
+            foreach( $fields as $key => $val )
+                $new_fields[ $key ] = $val;
+        return $new_fields;
+    } 
