@@ -2308,3 +2308,43 @@ article {  margin: 0 0 70px;}
   margin-right: 20px;
   margin-bottom: 20px;
 }
+
+/*Search form*/
+.search-form {
+  display: table;
+  width: 100%;
+}
+.search-field {
+  display: table-cell;
+  width: 100%;
+  height: 50px;
+  border: 1px solid #ccc;
+  border-right: 0;
+  padding: 0 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.search-submit-wrap {
+  display: table-cell;
+  width: 1%;
+  position: relative;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 0;
+}
+.search-submit {
+  height: 50px;
+  width: 50px;
+  background: hsl(39, 100%, 50%);
+  border: 0;
+}
+.icon-search {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  margin-top: -10px;
+  margin-left: -10px;
+}
