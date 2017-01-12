@@ -310,7 +310,9 @@ section.post_blog_bg {
 article.blog_post:last-child {
   border-bottom: medium none;
 }
-
+.page_wrap {
+  padding: 55px 0 40px 0;
+}
 .page-numbers {
   clear: both;
   margin: 30px auto;

@@ -22,7 +22,7 @@ if ( post_password_required() )
     <?php if ( have_comments() ) : ?>
         <h3 class="comments-title">
             <?php
-                printf( _nx( 'One thought on "%2$s"', '%1$s thoughts on "%2$s"', get_comments_number(), 'comments title', 'twentythirteen' ),
+                printf( _nx( 'One thought on "%2$s"', '%1$s thoughts on "%2$s"', get_comments_number(), 'comments title', 'wptuts' ),
                     number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
             ?>
         </h3>
@@ -44,14 +44,14 @@ if ( post_password_required() )
             if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
         ?>
         <nav class="navigation comment-navigation" role="navigation">
-            <h1 class="screen-reader-text section-heading"><?php _e( 'Comment navigation', 'twentythirteen' ); ?></h1>
-            <div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'twentythirteen' ) ); ?></div>
-            <div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'twentythirteen' ) ); ?></div>
+            <h1 class="screen-reader-text section-heading"><?php esc_html_e( 'Comment navigation', 'wptuts' ); ?></h1>
+            <div class="nav-previous"><?php previous_comments_link( esc_html__( '&larr; Older Comments', 'wptuts' ) ); ?></div>
+            <div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments &rarr;', 'wptuts' ) ); ?></div>
         </nav><!-- .comment-navigation -->
         <?php endif; // Check for comment navigation ?>
  
         <?php if ( ! comments_open() && get_comments_number() ) : ?>
-        <p class="no-comments"><?php _e( 'Comments are closed.' , 'twentythirteen' ); ?></p>
+        <p class="no-comments"><?php esc_html_e( 'Comments are closed.' , 'wptuts' ); ?></p>
         <?php endif; ?>
  
     <?php endif; // have_comments() ?>

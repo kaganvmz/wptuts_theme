@@ -1,5 +1,3 @@
-<article class="blog_post">
-	<h4> <?php the_title(); ?> </h4>
-
+<article class="blog_post page_wrap">
 	<?php the_content(); ?>
 </article>
